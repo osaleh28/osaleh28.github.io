@@ -22,6 +22,11 @@ header h1 {
   margin-bottom: 10px;
 }
 
+.logo {
+  height: 60px;
+  width: auto;
+}
+
 .btn {
   display: inline-block;
   background: blue;
