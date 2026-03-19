@@ -25,13 +25,13 @@ body {
   align-items: center;
   text-align: center;
 
-  gap: 8px;
+  gap: 6px;
 }
 
 /* LOGO */
 .logo {
   height: 300px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 /* TAGLINE */
