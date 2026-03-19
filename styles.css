@@ -112,10 +112,22 @@ nav ul li a:hover {
 }
 
 
-form {
-  display: grid;
-  gap: 10px;
-  max-width: 500px;
+#formMessage {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  background-color: lightgreen;
+  color: darkgreen;
+  border: 1px solid green;
 }
 
 input, textarea {
