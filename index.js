@@ -1,7 +1,7 @@
-const form = document.querySelector("form");
+const form = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const data = new FormData(form);
@@ -10,23 +10,24 @@ form.addEventListener("submit", function(event) {
     method: "POST",
     body: data,
     headers: {
-      'Accept': 'application/json'
+      Accept: "application/json"
     }
   })
-  .then(response => {
-    if (response.ok) {
-      formMessage.textContent = "✅ Message sent successfully!";
-      formMessage.classList.remove("hidden");
-      formMessage.classList.add("success");
+    .then(function (response) {
+      formMessage.classList.remove("hidden", "success", "error");
 
-      form.reset();
-    } else {
-      formMessage.textContent = "❌ Something went wrong. Please try again.";
-      formMessage.classList.remove("hidden");
-    }
-  })
-  .catch(() => {
-    formMessage.textContent = "⚠️ Network error. Please try again.";
-    formMessage.classList.remove("hidden");
-  });
+      if (response.ok) {
+        formMessage.textContent = "Success! Your message has been sent.";
+        formMessage.classList.add("success");
+        form.reset();
+      } else {
+        formMessage.textContent = "Sorry, your message was not sent. Please try again.";
+        formMessage.classList.add("error");
+      }
+    })
+    .catch(function () {
+      formMessage.classList.remove("hidden", "success", "error");
+      formMessage.textContent = "Sorry, your message was not sent. Please check your connection and try again.";
+      formMessage.classList.add("error");
+    });
 });
