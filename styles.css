@@ -91,6 +91,20 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
+table {
+  background-colr: white;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {background-color: darkblue;
+    color: white;
+   }
+
+td, th {
+  text-align: center;
+}
+
 form {
   display: grid;
   gap: 10px;
