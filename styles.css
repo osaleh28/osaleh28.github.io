@@ -25,14 +25,12 @@ body {
   align-items: center;
   text-align: center;
 
-  gap: 15px;
+  gap: 8px;
 }
 
 /* LOGO */
-
 .logo {
   height: 300px;
-  width: auto;
   margin-bottom: 5px;
 }
 
