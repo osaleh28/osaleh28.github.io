@@ -1,4 +1,4 @@
-{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,52 +12,58 @@ body {
 }
 
 header {
-  background: navy;
+  background-color: navy;
   color: white;
   text-align: center;
   padding: 60px 20px;
 }
 
 header h1 {
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
 .logo {
-  height: 5px;
+  height: 90px;
+  margin-bottom: 10px;
 }
 
 .btn {
   display: inline-block;
-  background: blue;
+  background-color: blue;
   color: white;
   padding: 10px 18px;
-  margin-top: 10px;
+  margin-top: 15px;
   text-decoration: none;
   border-radius: 5px;
 }
 
+.btn:hover {
+  background-color: darkblue;
+}
+
 nav {
-  background: white;
-  border-bottom: 1px solid #ddd;
+  background-color: white;
+  border-bottom: 1px solid gray;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
-  nav ul li a {
   display: block;
   padding: 15px 20px;
-  text-decoration: none; /* removes underline */
-  color: #333;
+  text-decoration: none;
+  color: black;
   font-weight: bold;
 }
 
 nav ul li a:hover {
-  color: #0ea5e9;
+  color: blue;
 }
 
 .container {
@@ -68,54 +74,109 @@ nav ul li a:hover {
 }
 
 .card-section {
-  background: white;
+  background-color: white;
   padding: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  border: 1px solid gray;
+}
+
+.card-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: navy;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  margin-top: 20px;
 }
 
 .card {
-  background: #f8fafc;
+  background-color: whitesmoke;
   padding: 20px;
   border-radius: 6px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid gray;
+  transition: 0.2s;
+}
+
+.card:hover {
+  background-color: lightblue;
 }
 
 .card h3 {
   margin-bottom: 10px;
+  font-weight: bold;
+  color: navy;
 }
 
+/* TABLE */
+
 .pricing-table {
-  margin: 20px auto; /* centers table horizontally */
-  border-collapse: collapse;
   width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
   background-color: white;
-  border: 2px solid black; /* outer border */
+  border: 2px solid black;
 }
 
 .pricing-table th {
   background-color: navy;
   color: white;
-  padding: 12px;
-  border: 1px solid black;
 }
 
+.pricing-table th,
 .pricing-table td {
+  border: 1px solid black;
   padding: 12px;
-  border: 1px solid black; /* row + column borders */
+  text-align: center;
 }
 
+.pricing-table tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+  max-width: 550px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+}
+
+.contact-form button {
+  background-color: blue;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: darkblue;
+}
+
+/* FORM MESSAGE */
 
 #formMessage {
-  margin-top: 15px;
+  max-width: 550px;
+  margin: 15px auto;
   text-align: center;
   font-weight: bold;
   padding: 10px;
@@ -132,29 +193,18 @@ nav ul li a:hover {
   border: 1px solid green;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.error {
+  background-color: lightcoral;
+  color: darkred;
+  border: 1px solid red;
 }
 
-button {
-  padding: 10px;
-  border: none;
-  background: #0ea5e9;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0284c7;
-}
+/* FOOTER */
 
 footer {
   text-align: center;
-  background: #0f172a;
-   color: white;
+  background-color: black;
+  color: white;
   padding: 20px;
 }
 
